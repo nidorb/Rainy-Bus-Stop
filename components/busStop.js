@@ -2,6 +2,11 @@ import * as THREE from 'three';
 import createOrbitControls from '../controls/orbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { createRain } from './rain.js';
+import busGLTF from '../models/bus.gltf?url';
+import billboardGLTF from '../models/billboard.gltf?url';
+import signGLTF from '../models/sign.gltf?url';
+import stopandlampGLTF from '../models/stopandlamp.gltf?url';
+import floorGLTF from '../models/floor.gltf?url';
 
 let busStopModel;
 let billboard;
@@ -39,7 +44,7 @@ const controls = createOrbitControls(camera, renderer.domElement);
 const loader = new GLTFLoader();
 
 loader.load(
-    'models/floor.gltf',
+    floorGLTF,
     function (gltf) {
         floor = gltf.scene;
         scene.add(floor);
@@ -51,7 +56,7 @@ loader.load(
 );
 
 loader.load(
-    'models/stopandlamp.gltf',
+    stopandlampGLTF,
     function (gltf) {
         busStopModel = gltf.scene;
         scene.add(busStopModel);
@@ -64,7 +69,7 @@ loader.load(
 );
 
 loader.load(
-    'models/sign.gltf',
+    signGLTF,
     function (gltf) {
         sign = gltf.scene;
         scene.add(sign);
@@ -76,7 +81,7 @@ loader.load(
 );
 
 loader.load(
-    'models/billboard.gltf',
+    billboardGLTF,
     function (gltf) {
         billboard = gltf.scene;
         billboard.position.y += 0.41;
@@ -89,7 +94,7 @@ loader.load(
 );
 
 loader.load(
-    'models/bus.gltf',
+    busGLTF,
     function (gltf) {
         bus = gltf.scene;
         scene.add(bus);
