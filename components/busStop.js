@@ -39,7 +39,7 @@ const controls = createOrbitControls(camera, renderer.domElement);
 const loader = new GLTFLoader();
 
 loader.load(
-    '../models/floor.gltf',
+    'models/floor.gltf',
     function (gltf) {
         floor = gltf.scene;
         scene.add(floor);
@@ -51,7 +51,7 @@ loader.load(
 );
 
 loader.load(
-    '../models/stopandlamp.gltf',
+    'models/stopandlamp.gltf',
     function (gltf) {
         busStopModel = gltf.scene;
         scene.add(busStopModel);
@@ -64,7 +64,7 @@ loader.load(
 );
 
 loader.load(
-    '../models/sign.gltf',
+    'models/sign.gltf',
     function (gltf) {
         sign = gltf.scene;
         scene.add(sign);
@@ -76,7 +76,7 @@ loader.load(
 );
 
 loader.load(
-    '../models/billboard.gltf',
+    'models/billboard.gltf',
     function (gltf) {
         billboard = gltf.scene;
         billboard.position.y += 0.41;
@@ -89,7 +89,7 @@ loader.load(
 );
 
 loader.load(
-    '../models/bus.gltf',
+    'models/bus.gltf',
     function (gltf) {
         bus = gltf.scene;
         scene.add(bus);
