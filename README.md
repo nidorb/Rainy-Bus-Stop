@@ -22,7 +22,7 @@ This project aims to create realistic rainy bus stop scene scene covered with nu
 ## Running the Program
 1. Type the command below in the appropriate terminal
    ```bash
-   npm install --save-dev vite
+   npx vite
 2. Open the URL displayed in the terminal (e.g., http://localhost:5173) in your web browser.
 
  
