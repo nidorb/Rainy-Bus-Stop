@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import greyTexture from '../images/grey.png';
 
 export function createRain(scene, busStopModels, drops = 1500) {
     const minheight = 0.41, maxheight = 100;
@@ -23,7 +24,7 @@ export function createRain(scene, busStopModels, drops = 1500) {
 
     const flakeMaterial = new THREE.PointsMaterial({
         size: 0.25,
-        map: textureLoad.load('../images/grey.png'),
+        map: textureLoad.load(greyTexture),
         color: 0xffffff,
         blending: THREE.AdditiveBlending,
         depthTest: true,
