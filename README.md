@@ -2,6 +2,10 @@
 
 This project aims to create realistic rainy bus stop scene scene covered with numerous promotional ads commonly seen in urban areas, particularly in foreign countries. However, it intends to evoke a gloomy mood by employing dark lighting and heavy rain effects. All 3D models were created using blender and the animation was done through three.js
 
+## Accessing Deployed Website
+
+The project can be accessed on the internet through https://rainy-bus-stop.vercel.app/. Note that it may take a while for the website to fully load due to large scenes caused by the models and textures
+
 ## Download the Project
 
 * Navigate to the GitHub repository containing the project.
