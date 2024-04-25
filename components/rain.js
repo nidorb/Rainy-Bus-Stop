@@ -23,7 +23,7 @@ export function createRain(scene, busStopModels, drops = 1500) {
 
     const flakeMaterial = new THREE.PointsMaterial({
         size: 0.25,
-        map: textureLoad.load('./images/grey.png'),
+        map: textureLoad.load('../images/grey.png'),
         color: 0xffffff,
         blending: THREE.AdditiveBlending,
         depthTest: true,
