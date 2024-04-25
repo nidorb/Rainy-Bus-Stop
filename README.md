@@ -13,11 +13,16 @@ This project aims to create realistic rainy bus stop scene scene covered with nu
 1. Download and install Node.js on your computer (https://nodejs.org/en/download/).
 
 2. Install three.js 
-npm install --save three
+   ```bash
+   npm install --save three
 3. Install vite
-npm install --save-dev vite
+   ```bash
+   npm install --save-dev vite
 
 ## Running the Program
-
+1. Type the command below in the appropriate terminal
+   ```bash
+   npm install --save-dev vite
+2. Open the URL displayed in the terminal (e.g., http://localhost:5173) in your web browser.
 
  
