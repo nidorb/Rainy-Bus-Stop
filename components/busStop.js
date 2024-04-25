@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import createOrbitControls from '../controls/orbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { createRain } from './rain.js';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
 let busStopModel;
 let billboard;
@@ -40,7 +39,7 @@ const controls = createOrbitControls(camera, renderer.domElement);
 const loader = new GLTFLoader();
 
 loader.load(
-    './models/floor.gltf',
+    '../models/floor.gltf',
     function (gltf) {
         floor = gltf.scene;
         scene.add(floor);
@@ -52,7 +51,7 @@ loader.load(
 );
 
 loader.load(
-    './models/stopandlamp.gltf',
+    '../models/stopandlamp.gltf',
     function (gltf) {
         busStopModel = gltf.scene;
         scene.add(busStopModel);
@@ -65,7 +64,7 @@ loader.load(
 );
 
 loader.load(
-    './models/sign.gltf',
+    '../models/sign.gltf',
     function (gltf) {
         sign = gltf.scene;
         scene.add(sign);
@@ -77,7 +76,7 @@ loader.load(
 );
 
 loader.load(
-    './models/billboard.gltf',
+    '../models/billboard.gltf',
     function (gltf) {
         billboard = gltf.scene;
         billboard.position.y += 0.41;
@@ -90,7 +89,7 @@ loader.load(
 );
 
 loader.load(
-    './models/bus.gltf',
+    '../models/bus.gltf',
     function (gltf) {
         bus = gltf.scene;
         scene.add(bus);
@@ -102,16 +101,6 @@ loader.load(
 );
 
 createRain(scene, models);
-
-// const hdriloader = new RGBELoader().load('./images/hdri.hdr');
-// let skySphereGeom = new THREE.SphereGeometry(100, 100, 100);
-// let skySphereMat = new THREE.MeshPhongMaterial({
-//     map: hdriloader,
-// });
-
-// skySphereMat.side = THREE.BackSide;
-// let skySphereMesh = new THREE.Mesh(skySphereGeom, skySphereMat);
-// scene.add(skySphereMesh);
 
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
