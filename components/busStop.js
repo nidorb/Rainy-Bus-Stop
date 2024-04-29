@@ -7,6 +7,7 @@ import billboardGLTF from '../models/billboard.glb?url';
 import signGLTF from '../models/sign.glb?url';
 import stopandlampGLTF from '../models/stopandlamp.glb?url';
 import floorGLTF from '../models/floor.glb?url';
+import rainSound from '../sounds/rain.mp3'
 
 let busStopModel;
 let billboard;
@@ -36,8 +37,35 @@ directional.target = targetObject;
 const directionalLightHelper = new THREE.DirectionalLightHelper(directional);
 scene.add(directional);
 
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(-41, 25, 30);
+
+function handleClick() {
+    document.removeEventListener('click', handleClick);
+
+    const listener = new THREE.AudioListener();
+    camera.add(listener);
+
+    const audioLoader = new THREE.AudioLoader();
+    const audio = new THREE.Audio(listener);
+
+    audioLoader.load(rainSound, function(buffer) {
+        audio.setBuffer(buffer);
+        audio.setLoop(true);
+        audio.setVolume(0.05);
+        const startTime = 0;
+        const endTime = 12;
+
+        audio.play();
+        audio.source.loopStart = startTime;
+        audio.source.loopEnd = endTime;
+    });
+}
+
+document.addEventListener('click', handleClick);
+
+
 
 const controls = createOrbitControls(camera, renderer.domElement);
 
