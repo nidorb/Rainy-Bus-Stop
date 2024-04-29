@@ -2,11 +2,11 @@ import * as THREE from 'three';
 import createOrbitControls from '../controls/orbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { createRain } from './rain.js';
-import busGLTF from '../models/bus.gltf?url';
-import billboardGLTF from '../models/billboard.gltf?url';
-import signGLTF from '../models/sign.gltf?url';
-import stopandlampGLTF from '../models/stopandlamp.gltf?url';
-import floorGLTF from '../models/floor.gltf?url';
+import busGLTF from '../models/bus.glb?url';
+import billboardGLTF from '../models/billboard.glb?url';
+import signGLTF from '../models/sign.glb?url';
+import stopandlampGLTF from '../models/stopandlamp.glb?url';
+import floorGLTF from '../models/floor.glb?url';
 
 let busStopModel;
 let billboard;
@@ -49,7 +49,12 @@ loader.load(
         floor = gltf.scene;
         scene.add(floor);
     },
-    undefined,
+    function (xhr) {
+        const percentageLoaded = xhr.loaded / xhr.total * 100;
+        if (percentageLoaded % 10 === 0) {
+            console.log('Floor is ' + percentageLoaded + '% loaded');
+        }
+    },
     function (error) {
         console.error('Error loading floor model:', error);
     }
@@ -62,7 +67,12 @@ loader.load(
         scene.add(busStopModel);
         models.push(busStopModel);
     },
-    undefined,
+    function (xhr) {
+        const percentageLoaded = xhr.loaded / xhr.total * 100;
+        if (percentageLoaded % 10 === 0) {
+            console.log('Lamp is ' + percentageLoaded + '% loaded');
+        }
+    },
     function (error) {
         console.error('Error loading bus stop model:', error);
     }
@@ -74,7 +84,12 @@ loader.load(
         sign = gltf.scene;
         scene.add(sign);
     },
-    undefined,
+    function (xhr) {
+        const percentageLoaded = xhr.loaded / xhr.total * 100;
+        if (percentageLoaded % 10 === 0) {
+            console.log('Sign is ' + percentageLoaded + '% loaded');
+        }
+    },
     function (error) {
         console.error('Error loading sign model:', error);
     }
@@ -87,7 +102,12 @@ loader.load(
         billboard.position.y += 0.41;
         scene.add(billboard);
     },
-    undefined,
+    function (xhr) {
+        const percentageLoaded = xhr.loaded / xhr.total * 100;
+        if (percentageLoaded % 10 === 0) {
+            console.log('Billboard is ' + percentageLoaded + '% loaded');
+        }
+    },
     function (error) {
         console.error('Error loading billboard model:', error);
     }
@@ -99,7 +119,12 @@ loader.load(
         bus = gltf.scene;
         scene.add(bus);
     },
-    undefined,
+    function (xhr) {
+        const percentageLoaded = xhr.loaded / xhr.total * 100;
+        if (percentageLoaded % 10 === 0) {
+            console.log('Bus is ' + percentageLoaded + '% loaded');
+        }
+    },
     function (error) {
         console.error('Error loading bus model:', error);
     }
