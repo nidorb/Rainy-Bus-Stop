@@ -4,7 +4,9 @@ This project aims to create realistic rainy bus stop scene scene covered with nu
 
 ## Accessing Deployed Website
 
-The project can be accessed on the internet through https://rainy-bus-stop.vercel.app/. Note that it may take a while for the website to fully load due to large scenes caused by the models and textures
+The project can be accessed on the internet through https://rainy-bus-stop.vercel.app/. 
+
+NOTE: It may take a while for the website to fully load due to large scenes caused by the models and textures
 
 ## Download the Project
 
