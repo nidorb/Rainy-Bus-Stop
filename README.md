@@ -1,21 +1,26 @@
 # Project Description
 
-This project aims to create realistic rainy bus stop scene scene covered with numerous promotional ads commonly seen in urban areas, particularly in foreign countries. However, it intends to evoke a gloomy mood by employing dark lighting and heavy rain effects. All 3D models were created using blender and the animation was done through three.js
+This project aims to create realistic rainy bus stop scene scene covered with numerous promotional ads commonly seen in urban areas, particularly in foreign countries. However, it intends to evoke a gloomy mood by employing dark lighting and heavy rain effects. All modeling, texturing and shading of the 3D Models (bus, shed, billboard, floor, lamp, sign, flyer board) were created and implemented through the usage of Blender while the animation was done through Three.js
 
-## Accessing Deployed Website
+
+![image](https://github.com/nidorb/Rainy-Bus-Stop/assets/104073665/52764120-fe50-4f7e-9b5d-4cc3f36cfb6c)
+
+
+
+## Accessing the Deployed Website
 
 The project can be accessed on the internet through https://rainy-bus-stop.vercel.app/. 
 
 NOTE: It may take a while for the website to fully load due to large scenes caused by the models and textures
 
-## Download the Project
+## Downloading the Project
 
 * Navigate to the GitHub repository containing the project.
 * Click on the "Code" button and select "Download ZIP" to download the project files.
 * Extract the downloaded ZIP archive to your desired location.
 * Open the terminal or command prompt and navigate to the extracted project directory.
 
-## Download Dependancies
+## Downloading the Dependancies
 1. Download and install Node.js on your computer (https://nodejs.org/en/download/).
 
 2. Install three.js 
